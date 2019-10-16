@@ -11,10 +11,12 @@
     <form action="addEmployee" th:action="@{/addEmployee}" method="post" th:object="${employee}">
         <fieldset>
             <legend>Input Employee Data</legend>
+            <h3 th:text="${error}"></h3>
             First Name: <input type="text" value="First Name" th:field="*{firstName}"><br>
-            Last Name: <input type="text" value="Last Name" th:field="*{lastName}">
-
-
+            Last Name: <input type="text" value="Last Name" th:field="*{lastName}"><br>
+<!--            Street: <input type="text" value="Street" th:field="*{address.street}"><br>-->
+<!--            Zip Code: <input type="text" value="zipCode" th:field="*{address.zipCode}">-->
+            <input type="submit" value="Add Employee">
 
         </fieldset>
 
